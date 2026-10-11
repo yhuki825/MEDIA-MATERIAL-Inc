@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--
+================================================================
+株式会社メディアマテリアル ブランドサイト デザイン案（9/26ハウススタイル版）
+  コンセプト：「モノと言葉のあいだに、レンズを置く。」
+    社名の Media（伝える媒体）と Material（モノ・素材）を、CSVの二つの事業
+    ── 紹介広告事業（伝える）と、カメラ・腕時計・ゲーム・スマホ等のEC運営（モノ）── に重ねる。
+    モノ（Material）の確かさを、レンズ（Media）を通して、人の目に正しく結ぶ会社として表現。
+    ・ヒーロー：絞り羽根がゆっくり開閉するCanvasと、事業を書き込んだ「仕様ラベル」（ヒーロー内の実物型）
+    ・右端のスクロールレール：小さな絞りが開いていき、f値が f/16 → f/1.4 へ進む
+    ・図：モノ → レンズ → 人の目、と光が結ばれる光線図のSVG
+    ※所在地・地名、代表者名からの着想は採用していません。
+  書体：Zen Old Mincho ＋ Zen Kaku Gothic New ＋ Barlow Condensed ＋ IBM Plex Mono
+  配色：暗室の炭色 #1A1918 ／ コバルト #5B86FF ／ 銀 #C9CCD2
+  デプロイ：Cloudflare Pages（Direct Upload）にこのファイルをそのままアップロード。
+            ビルド不要。外部依存は Google Fonts と Unsplash 画像のみ。
+
+  ■ 公開前の確認事項（チェックリスト）
+  【確認事項】英字ロゴ「MEDIA MATERIAL」は仮表記です。社名をMedia＋Materialと解釈したのは制作側の案です。
+  【確認事項】キャッチコピー「確かな品を、確かな言葉で。」と各見出しは制作側の案です。
+  【確認事項】取扱商品が新品か中古品かは未確認です。中古品を扱う場合は古物商許可番号の掲載をご確認ください（会社概要にコメントで枠を用意）。
+  【確認事項】海外ECの販売先・チャネル、国内ECの販売チャネルは未確認のため記載していません。通信販売としての特定商取引法に基づく表記の要否もご確認ください。
+  【確認事項】紹介広告事業ではステルスマーケティング規制（景品表示法）に沿った「広告」表示の運用方針をご確認ください。
+  【確認事項】各事業の説明・取り扱いのながれ・大切にしていることはCSVを膨らませた案です。実績・数値はCSVに無いため未掲載です。
+  【確認事項】代表者の役職名は「代表取締役」と仮置きしています。
+  【確認事項】設立年月日・資本金・従業員数はCSVに無いため会社概要ではコメントアウトしています。
+  【確認事項】代表メッセージは草案です。ご本人の確認・修正を経て公開してください。署名欄の氏名は会社概要に記載のため省略しています。
+  【確認事項】画像はUnsplashの仮素材（差し替え推奨）：1471341971476-ae15ff5dd4ea / 1498049794561-7780e7231661 / 1580910051074-3eb694886505 / 1524592094714-0f0654e20314
+  【確認事項】旧案で使っていた腕時計型端末の写真（1546868871-7041f2a55e12）は特定の製品と分かる形のため外しました。
+  【確認事項】OGP画像・favicon（仮の絞り）・公開URL
+  ※ご依頼に合わせ、連絡用のフォーム・エリア、代表者写真は設けていません。
+================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>株式会社メディアマテリアル｜紹介広告事業・国内／海外ECネットショップ運営</title>
+<meta name="description" content="株式会社メディアマテリアルは、商品・サービスの認知拡大を目的とした紹介広告事業と、カメラ・腕時計・ゲーム・スマホなどの国内ECネットショップ、腕時計などの海外ECネットショップを運営しています。">
+<meta property="og:title" content="株式会社メディアマテリアル｜確かな品を、確かな言葉で。">
+<meta property="og:description" content="紹介広告事業と、国内・海外のECネットショップ運営。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<!-- 【確認事項】og:url / og:image は公開ドメイン確定後に設定 -->
+<meta name="theme-color" content="#1A1918">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1918'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23C9CCD2' stroke-width='1.4'/%3E%3Cpath d='M16 9l6 3.5v7L16 23l-6-3.5v-7z' fill='%234C7DFF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Zen+Old+Mincho:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  /* 暗室の炭色に、レンズのコバルトと銀 */
+  --anshitsu:#1A1918;      /* 基調：暗室 */
+  --anshitsu-2:#23221F;    /* 一段明るい */
+  --anshitsu-deep:#121110; /* フッター */
+  --cobalt:#5B86FF;        /* 差し色：レンズコートのコバルト */
+  --silver:#C9CCD2;        /* 第二色：金属の銀 */
+  --base:var(--anshitsu);--base2:var(--anshitsu-2);--deep:var(--anshitsu-deep);
+  --base-rgb:26,25,24;
+  --text:#ECEBE8;--mute:#9A9893;--soft:rgba(236,235,232,.8);
+  --accent:var(--cobalt);--accent-rgb:91,134,255;
+  --line:rgba(236,235,232,.13);--line-strong:rgba(236,235,232,.3);
+  --paper:#E9E9E6;--ink:#1B1B1D;--ink-rgb:27,27,29;--ink-mute:#62615E;--accent-ink:#2F5BD9;
+  --fallback:repeating-conic-gradient(from 0deg at 50% 50%,rgba(201,204,210,.1) 0 30deg,transparent 30deg 60deg),linear-gradient(135deg,#23221F,#121110);
+  --serif:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --latin:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --num:var(--mono);
+  --header-h:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.04em;word-break:auto-phrase;text-wrap:pretty;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,li,dd,dt{word-break:auto-phrase}
+.nw{display:inline-block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--accent);color:var(--base);padding:10px 16px;text-decoration:none;font-weight:700;transition:top .2s}
+.skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1160px,100% - 48px);margin:0 auto}
+.sec{padding:clamp(96px,14vw,180px) 0;position:relative}
+.alt{background:var(--base2);--sec-bg:var(--base2)}
+.deep{background:var(--deep);--sec-bg:var(--deep)}
+.paper{background:var(--paper);color:var(--ink);--line:rgba(var(--ink-rgb),.16);--line-strong:rgba(var(--ink-rgb),.5);--mute:var(--ink-mute);--soft:rgba(var(--ink-rgb),.8);--sec-bg:var(--paper);--accent:var(--accent-ink)}
+.lead{max-width:34em;margin:0 0 1.4em}
+p{margin:0 0 1.3em}
+
+/* header */
+.header{position:fixed;inset:0 0 auto 0;z-index:100;padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
+.header.is-scrolled{background:rgba(var(--base-rgb),.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line)}
+.header-in{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(20px,4vw,56px);max-width:1440px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{flex:none}
+.gnav ul{list-style:none;margin:0;padding:0;display:flex;gap:clamp(16px,2.2vw,34px)}
+.gnav a{position:relative;display:block;padding:6px 0;text-decoration:none;font-size:13px;letter-spacing:.12em}
+.menu-btn{display:none;background:none;border:0;color:var(--text);width:44px;height:44px;cursor:pointer;position:relative;flex:none}
+@media (max-width:900px){
+ :root{--header-h:64px}
+ .menu-btn{display:block;z-index:120}
+ .gnav{position:fixed;inset:0;background:rgba(var(--base-rgb),.97);display:grid;place-items:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;padding:env(safe-area-inset-top,0px) 24px env(safe-area-inset-bottom,0px)}
+ .gnav.is-open{opacity:1;visibility:visible}
+ .gnav ul{flex-direction:column;align-items:center;gap:26px}
+ .gnav a{font-family:var(--serif);font-size:20px;letter-spacing:.14em}
+}
+
+/* hero shared */
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.js .hero [data-in]{opacity:0;transform:translateY(14px);transition:opacity 1.2s cubic-bezier(.22,.7,.2,1),transform 1.2s cubic-bezier(.22,.7,.2,1)}
+.js .hero .v[data-in]{transform:translateY(-14px)}
+.js .is-loaded .hero [data-in]{opacity:1;transform:none}
+.is-loaded .hero [data-in="2"]{transition-delay:.4s}
+.is-loaded .hero [data-in="3"]{transition-delay:.85s}
+.is-loaded .hero [data-in="4"]{transition-delay:1.25s}
+.scroll-cue{position:absolute;z-index:2;display:flex;align-items:center;gap:12px;font-family:var(--latin);font-size:12px;letter-spacing:.24em;color:var(--mute);text-decoration:none;text-transform:uppercase}
+.scroll-cue i{display:block;width:1px;height:44px;background:linear-gradient(var(--mute),transparent);animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.22,.7,.2,1),transform 1s cubic-bezier(.22,.7,.2,1)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .reveal--fade{transform:none}
+
+/* photos */
+.ph{position:relative;overflow:hidden;margin:0;background:linear-gradient(135deg,var(--base2),var(--deep))}
+.ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.03)}
+.ph.is-fallback{background:var(--fallback)}
+
+/* concept */
+.concept-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);align-items:center}
+.concept-text p{max-width:30em}
+.fig{margin:0}
+.fig svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto;overflow:visible}
+.fig figcaption{margin-top:16px;text-align:center;font-size:13px;color:var(--mute);letter-spacing:.08em}
+.fig .ln{fill:none;stroke:var(--accent);stroke-width:1.3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.45,.05,.2,1) .3s}
+.fig .ln.d2{transition-delay:.9s}.fig .ln.d3{transition-delay:1.5s}.fig .ln.d4{transition-delay:2.1s}
+.fig .soft{fill:none;stroke:var(--line-strong);stroke-width:1}
+.fig .dot{fill:var(--accent);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.3);transition:opacity .8s 1.2s,transform .8s cubic-bezier(.3,1.6,.5,1) 1.2s}
+.fig .lbl{fill:currentColor;font-family:var(--serif);font-size:17px;letter-spacing:.16em;opacity:0;transition:opacity 1s 1.8s}
+.fig .lbl-s{fill:var(--mute);font-family:var(--sans);font-size:11px;letter-spacing:.14em;opacity:0;transition:opacity 1s 2s}
+.fig.is-in .ln{stroke-dashoffset:0}
+.fig.is-in .dot{opacity:1;transform:none}
+.fig.is-in .lbl,.fig.is-in .lbl-s{opacity:1}
+@media (max-width:900px){.concept-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* band */
+.band{position:relative;height:clamp(260px,44vw,540px);overflow:hidden;margin:0;background:var(--fallback)}
+.band img{position:absolute;left:0;top:-9%;width:100%;height:118%;object-fit:cover;filter:saturate(.7) brightness(.66);will-change:transform}
+.band figcaption{position:absolute;left:clamp(24px,6vw,88px);bottom:clamp(24px,5vw,56px);z-index:1;font-family:var(--serif);font-size:clamp(18px,2vw,24px);letter-spacing:.16em;line-height:1.9;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+
+/* business rows */
+.biz-intro{max-width:36em;margin:-24px 0 clamp(56px,8vw,96px);color:var(--mute)}
+.biz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.biz+.biz{margin-top:clamp(72px,10vw,128px)}
+.biz:nth-of-type(even) .biz__media{order:2}
+.biz__media{aspect-ratio:4/3}
+.biz__media img{transform:scale(1.06);transition:transform 2.2s cubic-bezier(.2,.6,.2,1)}
+.biz.is-in .biz__media img{transform:scale(1)}
+.biz:hover .biz__media img{transform:scale(1.03)}
+.biz__kind{margin:0 0 10px;font-size:13px;letter-spacing:.16em;color:var(--accent)}
+.biz h3{font-family:var(--serif);font-weight:600;font-size:clamp(21px,2.3vw,28px);line-height:1.6;letter-spacing:.08em;margin:0 0 18px}
+.biz p{color:var(--soft)}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{font-size:12.5px;letter-spacing:.08em;padding:4px 13px;border:1px solid var(--line-strong);border-radius:999px}
+.note{font-size:13px;color:var(--mute);margin:18px 0 0}
+@media (max-width:900px){.biz{grid-template-columns:minmax(0,1fr)}.biz:nth-of-type(even) .biz__media{order:0}}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:clamp(16px,2.4vw,32px);position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:11px;height:1px;background:var(--line)}
+.steps::after{content:"";position:absolute;left:0;top:11px;height:1px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 2.4s cubic-bezier(.6,.1,.2,1)}
+.steps.is-in::after{transform:scaleX(1)}
+.step{position:relative;padding-top:46px}
+.step__dot{position:absolute;left:0;top:0;width:23px;height:23px;border-radius:50%;border:1px solid var(--mute);background:var(--sec-bg,var(--base));display:grid;place-items:center}
+.step__dot::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .5s cubic-bezier(.3,1.6,.5,1) var(--d,0s)}
+.steps.is-in .step__dot::after{transform:scale(1)}
+.step__no{font-family:var(--num);font-size:13px;color:var(--accent);letter-spacing:.12em}
+.step h3{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.18em;margin:6px 0 4px}
+.step__sub{font-size:12.5px;color:var(--mute);letter-spacing:.1em;margin:0 0 10px}
+.step p{font-size:14.5px;margin:0;color:var(--soft)}
+.loop{display:flex;align-items:center;gap:14px;margin:52px 0 0;color:var(--mute);font-size:14px}
+.loop svg{flex:none}
+@media (max-width:900px){
+ .steps{grid-template-columns:minmax(0,1fr);gap:0;padding-left:42px}
+ .steps::before,.steps::after{left:11px;right:auto;top:10px;bottom:10px;width:1px;height:auto}
+ .steps::after{transform:scaleY(0);transform-origin:top}
+ .steps.is-in::after{transform:scaleY(1)}
+ .step{padding:0 0 36px}
+ .step__dot{left:-42px}
+}
+
+/* values */
+.values{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.values li{padding:8px clamp(18px,3vw,40px) 8px;border-left:1px solid var(--line)}
+.values li:first-child{border-left:0;padding-left:0}
+.values h3{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.12em;margin:0 0 12px;line-height:1.6}
+.values h3 i{display:block;font-style:normal;font-family:var(--latin);font-size:13px;letter-spacing:.2em;color:var(--accent);margin-bottom:8px}
+.values p{margin:0;font-size:14.5px;color:var(--soft)}
+@media (max-width:860px){.values{grid-template-columns:minmax(0,1fr)}.values li{border-left:0;border-top:1px solid var(--line);padding:24px 0}.values li:first-child{border-top:0;padding-top:0}}
+
+/* message */
+.msg{display:flex;flex-direction:row-reverse;gap:clamp(40px,6vw,96px);justify-content:center;align-items:flex-start}
+.msg__title{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(28px,3vw,40px);letter-spacing:.2em;line-height:1.7;margin:0;flex:none}
+.msg__body{writing-mode:vertical-rl;font-family:var(--serif);font-size:16.5px;line-height:2.3;letter-spacing:.14em;height:30em;max-width:100%;overflow-x:auto;overflow-y:hidden}
+.msg__body p{margin:0 0 0 1.5em}
+.msg__body .first{font-size:1.25em}
+.msg__sign{margin-top:auto!important;text-align:end;font-family:var(--sans)}
+.msg__sign small{display:block;font-size:13px;color:var(--mute);letter-spacing:.2em}
+.msg__sign strong{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.3em}
+@media (max-width:900px){
+ .msg{flex-direction:column;gap:32px}
+ .msg__title,.msg__body{writing-mode:horizontal-tb;height:auto}
+ .msg__body{line-height:2.1;letter-spacing:.06em;overflow:visible}
+ .msg__body p{margin:0 0 1.4em}
+ .msg__sign{text-align:right}
+}
+
+/* company */
+.company-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.company-grid .sh{margin-bottom:24px}
+@media (max-width:900px){.company-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* footer */
+.footer{background:var(--deep);border-top:1px solid var(--line);padding:clamp(56px,8vw,80px) 0 calc(40px + env(safe-area-inset-bottom,0px))}
+.footer-in{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px}
+.footer-tag{margin:18px 0 0;font-family:var(--serif);font-size:clamp(15px,1.6vw,19px);letter-spacing:.18em}
+.footer-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 26px}
+.footer-nav a{text-decoration:none;font-size:13px;color:var(--mute);letter-spacing:.1em;transition:color .3s}
+.footer-nav a:hover{color:var(--text)}
+.copy{width:100%;margin:36px 0 0;font-family:var(--latin);font-size:12.5px;color:var(--mute);letter-spacing:.1em}
+.footer--center .footer-in{flex-direction:column;align-items:center;text-align:center}
+.footer--center .footer-nav ul{justify-content:center}
+
+/* rail base */
+.rail{position:fixed;right:clamp(10px,1.6vw,24px);top:50%;transform:translateY(-50%);height:min(54vh,480px);width:18px;z-index:90;pointer-events:none}
+.rail__line{position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--line-strong);opacity:.6}
+.rail__fill{position:absolute;left:8px;top:0;width:1px;height:100%;background:var(--accent);transform-origin:top;transform:scaleY(0)}
+.rail__tick{position:absolute;left:4px;width:9px;height:1px;background:rgba(var(--accent-rgb),.45);transition:width .4s,background .4s}
+.rail__tick.is-passed{width:11px;background:var(--accent)}
+.rail.on-light{--line-strong:rgba(var(--ink-rgb),.4)}
+@media (max-width:900px){.rail{right:6px;height:38vh}.rail__read{display:none}}
+
+.sh{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 18px;margin:0 0 clamp(40px,6vw,72px)}
+.sh h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3vw,38px);line-height:1.55;letter-spacing:.1em;margin:0}
+.sh h2 i{display:inline-block;width:.5em;height:.5em;margin-right:.5em;vertical-align:.12em;border:1.5px solid var(--accent);transform:rotate(45deg)}
+.sh__en{font-family:var(--latin);font-size:13px;letter-spacing:.2em;color:var(--mute);text-transform:lowercase}
+.gnav a::after{content:"";position:absolute;left:50%;bottom:-4px;width:5px;height:5px;background:var(--accent);transform:translateX(-50%) scale(0);transition:transform .3s}
+.gnav a:hover::after,.gnav a:focus-visible::after{transform:translateX(-50%) scale(1)}
+.menu-btn span{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s}
+.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:22px}.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.profile{margin:0;border-top:1px solid var(--line-strong)}
+.profile>div{display:grid;grid-template-columns:9em minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.profile dt{color:var(--mute);font-size:14px;letter-spacing:.14em}
+.profile dd{margin:0}
+.profile ul{margin:0;padding:0;list-style:none}
+.profile li{position:relative;padding-left:1.2em}
+.profile li+li{margin-top:.3em}
+.profile li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:6px;background:var(--accent);border-radius:50%;background:none;border:1.5px solid var(--accent);width:9px;height:9px;top:.72em}
+@media (max-width:760px){.profile>div{grid-template-columns:minmax(0,1fr);gap:4px}}
+.logo__t{display:flex;flex-direction:column;line-height:1.05}
+.logo__t b{font-family:var(--latin);font-weight:500;font-size:19px;letter-spacing:.16em}
+.logo__t small{font-size:10px;color:var(--mute);letter-spacing:.12em}
+
+/* hero : F (A + in-hero artefact) */
+.hero{background:radial-gradient(80% 70% at 42% 48%,#26252A 0%,var(--base) 64%)}
+.hero__veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 60%,rgba(26,25,24,.85) 100%)}
+.hero__in{position:relative;z-index:1;min-height:100vh;min-height:100svh;max-width:1440px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:40px;padding:calc(var(--header-h) + 48px) clamp(48px,7vw,110px) 72px clamp(20px,5vw,72px)}
+.hero h1{writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;font-size:clamp(36px,4.2vw,58px);line-height:1.6;letter-spacing:.2em;margin:0;align-self:center}
+.hero h1 span{display:block}
+.hero h1 span+span{padding-top:2.4em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.spec{max-width:30em;background:rgba(26,25,24,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid var(--line-strong);padding:20px 22px 18px;position:relative}
+.spec::before{content:"";position:absolute;left:-1px;top:-1px;width:42px;height:3px;background:var(--accent)}
+.spec__head{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--mute);margin:0 0 12px;padding-bottom:10px;border-bottom:1px dashed var(--line-strong)}
+.spec__lead{font-size:14.5px;color:var(--soft);margin:0 0 14px}
+.spec dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;font-size:13.5px}
+.spec dt{font-family:var(--latin);font-weight:500;letter-spacing:.18em;color:var(--silver);font-size:13px;padding-top:1px}
+.spec dd{margin:0}
+.spec dd a{text-decoration:none;border-bottom:1px solid var(--line-strong);transition:border-color .3s}
+.spec dd a:hover{border-color:var(--accent)}
+.hero .scroll-cue{left:50%;bottom:20px;transform:translateX(-50%);flex-direction:column}
+@media (max-width:760px){
+ .hero__in{grid-template-columns:minmax(0,1fr);align-content:space-between;padding:calc(var(--header-h) + 36px) 18px 76px}
+ .hero h1{writing-mode:horizontal-tb;font-size:clamp(28px,8.4vw,40px);letter-spacing:.08em;order:-1}
+ .hero h1 span+span{padding-top:0;padding-left:1em}
+ .spec{padding:16px 16px 14px}
+ .hero .scroll-cue{display:none}
+}
+
+/* about */
+.wordpair{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:18px;margin:28px 0 0}
+.wordpair div{border-top:1px solid var(--line-strong);padding-top:12px}
+.wordpair b{display:block;font-family:var(--latin);font-weight:400;font-size:clamp(30px,3.6vw,46px);letter-spacing:.06em;line-height:1;text-transform:uppercase}
+.wordpair small{font-size:12.5px;color:var(--mute);letter-spacing:.1em}
+.wordpair i{font-style:normal;font-family:var(--latin);font-size:30px;color:var(--accent)}
+.fig .lens{fill:rgba(91,134,255,.08);stroke:var(--accent);stroke-width:1.4}
+.fig .ray{stroke:var(--silver);stroke-width:1}
+.fig .obj{fill:none;stroke:var(--text);stroke-width:1.3}
+
+/* items */
+.items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.items li{background:var(--base);padding:clamp(24px,3vw,36px) 20px;text-align:center;transition:background .4s}
+.items li:hover{background:var(--base2)}
+.items svg{width:52px;height:52px;margin:0 auto 14px;display:block;fill:none;stroke:var(--silver);stroke-width:1.3}
+.items h3{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:.14em;margin:0}
+.items span{display:block;font-family:var(--latin);font-size:12px;letter-spacing:.24em;color:var(--mute);margin:4px 0 10px}
+.items em{font-style:normal;font-size:12px;letter-spacing:.08em;color:var(--accent);border:1px solid rgba(91,134,255,.45);border-radius:999px;padding:2px 10px}
+@media (max-width:760px){.items{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* rail : aperture */
+.rail__iris{position:absolute;left:8px;top:0;width:22px;height:22px;color:var(--silver);transform:translate(-50%,-50%)}
+.rail__read{position:absolute;right:22px;top:0;transform:translateY(-50%);font-family:var(--mono);font-size:11px;color:var(--accent);writing-mode:vertical-rl;letter-spacing:.08em;white-space:nowrap}
+.rail.on-light .rail__iris{color:var(--ink)}
+.rail.on-light .rail__read{color:var(--accent-ink)}
+
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .js .reveal,.js .hero [data-in]{opacity:1;transform:none}
+ .fig .ln{stroke-dashoffset:0}.fig .dot,.fig .lbl,.fig .lbl-s{opacity:1;transform:none}
+ .steps::after{transform:none}.step__dot::after{transform:scale(1)}
+ .biz__media img{transform:none}
+ .band img{transform:none!important}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="header" id="header">
+  <div class="header-in">
+    <!-- 【確認事項】ロゴマーク（絞りの六角形）・英字表記「MEDIA MATERIAL」は仮です -->
+    <a class="logo" href="#top" aria-label="株式会社メディアマテリアル トップへ"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#C9CCD2" stroke-width="1.2"/><path d="M16 8l7 4v8l-7 4-7-4v-8z" fill="none" stroke="#5B86FF" stroke-width="1.4"/></svg><span class="logo__t"><b>MEDIA MATERIAL</b><small>株式会社メディアマテリアル</small></span></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="gnav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="gnav" id="gnav" aria-label="メインメニュー">
+      <ul>
+      <li><a href="#about">社名のこと</a></li>
+      <li><a href="#business">事業内容</a></li>
+      <li><a href="#items">取り扱い</a></li>
+      <li><a href="#process">ながれ</a></li>
+      <li><a href="#message">代表メッセージ</a></li>
+      <li><a href="#company">会社概要</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="rail" id="rail" aria-hidden="true">
+  <div class="rail__line"></div>
+  <div class="rail__fill" id="railFill"></div>
+  <svg class="rail__iris" id="railIris" viewBox="-12 -12 24 24"><circle r="10.5" fill="none" stroke="currentColor" stroke-width="1"/><path id="railHole" d="" fill="#5B86FF"/></svg><span class="rail__read" id="railRead">f/16</span>
+</div>
+
+<main id="main">
+<!-- ===== Hero (F: 絞りのCanvas＋仕様ラベル) ===== -->
+<section class="hero" id="top" data-rail aria-labelledby="heroTitle">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__in">
+    <div class="spec" data-in="3">
+      <p class="spec__head" aria-hidden="true"><span>SPEC SHEET</span><span id="fstop">f/2.8</span></p>
+      <p class="spec__lead">株式会社メディアマテリアルは、商品・サービスの認知拡大を目的とした紹介広告事業と、国内・海外のECネットショップを運営しています。</p>
+      <dl>
+        <dt>MEDIA</dt><dd><a href="#biz1">紹介広告事業</a></dd>
+        <dt>MATERIAL</dt><dd><a href="#biz2">国内EC</a>：カメラ／腕時計／ゲーム／スマホ など<br><a href="#biz3">海外EC</a>：腕時計 など</dd>
+      </dl>
+    </div>
+    <!-- 【確認事項】キャッチコピーは制作側の案 -->
+    <h1 class="v" id="heroTitle" data-in="1"><span>確かな品を、</span><span>確かな<em>言葉</em>で。</span></h1>
+  </div>
+  <a class="scroll-cue" href="#about"><i></i>Scroll</a>
+</section>
+
+<!-- ===== About ===== -->
+<section class="sec" id="about" data-rail aria-labelledby="abTitle">
+  <div class="wrap concept-grid">
+    <div class="concept-text reveal">
+      <div class="sh sh--glyph"><h2 id="abTitle"><i aria-hidden="true"></i>モノと言葉のあいだに、レンズを置く。</h2><span class="sh__en" lang="en">media + material</span></div>
+      <!-- 【確認事項】社名の解釈・理念文は制作側の案 -->
+      <p>社名の「メディアマテリアル」を、私たちは二つの言葉の組み合わせとして読んでいます。伝えるための媒体（Media）と、手に取れるモノ（Material）です。</p>
+      <p>どれほど確かなモノでも、伝え方がぼやけていれば、その良さは人の目に結びません。反対に、伝え方だけが先走れば、届いたモノとの間にずれが生まれます。</p>
+      <p>だから私たちは、モノをよく知ったうえで、レンズの焦点を合わせるように言葉を選びます。紹介広告と、ネットショップ。その両方を手がける理由が、ここにあります。</p>
+      <div class="wordpair" aria-hidden="true">
+        <div><b>Media</b><small>伝える ── 紹介広告事業</small></div><i>+</i>
+        <div><b>Material</b><small>モノ ── ECネットショップ</small></div>
+      </div>
+    </div>
+    <figure class="fig reveal--fade" data-draw>
+      <svg viewBox="0 0 460 280" role="img" aria-labelledby="figT figD">
+        <title id="figT">モノからレンズを通って人の目に光が結ばれる図</title>
+        <desc id="figD">左の「モノ（Material）」から出た光線が、中央の凸レンズ「伝え方（Media）」で屈折し、右の「人の目（お客さま）」で一点に結ばれる光線図。</desc>
+        <path class="ln obj" pathLength="1" d="M60 80v120 M48 92l12-12 12 12"/>
+        <path class="ln lens d2" pathLength="1" d="M230 40c26 40 26 160 0 200c-26-40-26-160 0-200z"/>
+        <path class="ln ray d3" pathLength="1" d="M60 80L230 80L400 200 M60 80L230 140L400 200 M60 80L230 200L400 200"/>
+        <path class="ln d4" pathLength="1" d="M400 200a14 9 0 1 0 28 0a14 9 0 1 0-28 0"/>
+        <circle class="dot" cx="400" cy="200" r="4"/>
+        <text class="lbl" x="60" y="236" text-anchor="middle">モノ</text>
+        <text class="lbl-s" x="60" y="256" text-anchor="middle">Material</text>
+        <text class="lbl" x="230" y="270" text-anchor="middle">伝え方</text>
+        <text class="lbl-s" x="230" y="26" text-anchor="middle">Media</text>
+        <text class="lbl" x="414" y="236" text-anchor="middle">人の目</text>
+        <text class="lbl-s" x="414" y="256" text-anchor="middle">お客さま</text>
+      </svg>
+      <figcaption>焦点が合えば、モノの確かさはそのまま届く。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<figure class="band">
+  <!-- 画像：Unsplash（仮）1471341971476-ae15ff5dd4ea 差し替え推奨 -->
+  <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?auto=format&amp;fit=crop&amp;w=2000&amp;q=72" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('is-fallback');this.remove()">
+  <figcaption>品をよく知り、<br>そのまま伝える。</figcaption>
+</figure>
+
+<!-- ===== Business ===== -->
+<section class="sec" id="business" data-rail aria-labelledby="bizTitle">
+  <div class="wrap">
+    <div class="sh sh--glyph"><h2 id="bizTitle"><i aria-hidden="true"></i>事業内容</h2><span class="sh__en" lang="en">business</span></div>
+    <!-- 【確認事項】各事業の説明はCSVを膨らませた案 -->
+    <article class="biz reveal" aria-labelledby="biz1">
+      <figure class="biz__media ph">
+        <!-- 画像：Unsplash（仮）1498049794561-7780e7231661 -->
+        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&amp;fit=crop&amp;w=1400&amp;q=72" alt="机の上に置かれたスマートフォン、腕時計、ヘッドホン、ノートパソコン" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('is-fallback');this.remove()">
+      </figure>
+      <div>
+        <p class="biz__kind">MEDIA ── 伝える</p>
+        <h3 id="biz1">広告マーケティング業<br><span class="nw">（紹介広告事業）</span></h3>
+        <p>商品・サービスの認知拡大を目的に、その特長や使いどころを分かりやすく紹介する広告を手がけます。知ってもらうきっかけをつくり、選ばれる理由を伝えます。</p>
+        <ul class="tags"><li>認知拡大</li><li>紹介広告</li><li>魅力の整理</li></ul>
+        <!-- 【確認事項】広告である旨の表示（ステルスマーケティング規制）の運用方針 -->
+      </div>
+    </article>
+    <article class="biz reveal" aria-labelledby="biz2">
+      <figure class="biz__media ph">
+        <!-- 画像：Unsplash（仮）1580910051074-3eb694886505 -->
+        <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&amp;fit=crop&amp;w=1400&amp;q=72" alt="白い布の上に置かれたスマートフォン" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('is-fallback');this.remove()">
+      </figure>
+      <div>
+        <p class="biz__kind">MATERIAL ── 国内</p>
+        <h3 id="biz2">国内ECネットショップ運営</h3>
+        <p>カメラ、腕時計、ゲーム、スマホなどを取り扱うネットショップを国内で運営しています。商品の状態や仕様を丁寧に伝え、安心して選べる売り場を目指します。</p>
+        <ul class="tags"><li>カメラ</li><li>腕時計</li><li>ゲーム</li><li>スマホ</li></ul>
+      </div>
+    </article>
+    <article class="biz reveal" aria-labelledby="biz3">
+      <figure class="biz__media ph">
+        <!-- 画像：Unsplash（仮）1524592094714-0f0654e20314 -->
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&amp;fit=crop&amp;w=1400&amp;q=72" alt="指でつまんだシンプルな腕時計" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('is-fallback');this.remove()">
+      </figure>
+      <div>
+        <p class="biz__kind">MATERIAL ── 海外</p>
+        <h3 id="biz3">海外ECネットショップ運営</h3>
+        <p>腕時計などを中心に、海外のお客さまへ向けたネットショップを運営しています。国や言葉が違っても、品の確かさが伝わるように心を配ります。</p>
+        <ul class="tags"><li>腕時計</li><li>海外向け販売</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Items ===== -->
+<section class="sec alt" id="items" data-rail aria-labelledby="itTitle">
+  <div class="wrap">
+    <div class="sh sh--glyph"><h2 id="itTitle"><i aria-hidden="true"></i>主な取り扱い</h2><span class="sh__en" lang="en">materials</span></div>
+    <ul class="items reveal">
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="6" y="15" width="40" height="27" rx="3"/><circle cx="26" cy="28" r="8"/><path d="M18 15l3-5h10l3 5"/></svg><h3>カメラ</h3><span>CAMERA</span><em>国内EC</em></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="11"/><path d="M20 15l2-9h8l2 9 M20 37l2 9h8l2-9 M26 20v6l4 3"/></svg><h3>腕時計</h3><span>WATCH</span><em>国内EC・海外EC</em></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M12 18h28a8 8 0 0 1 8 8v4a8 8 0 0 1-14 5l-2-2H20l-2 2a8 8 0 0 1-14-5v-4a8 8 0 0 1 8-8z M15 24v8 M11 28h8"/><circle cx="35" cy="26" r="1.5"/><circle cx="39" cy="30" r="1.5"/></svg><h3>ゲーム</h3><span>GAME</span><em>国内EC</em></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="16" y="6" width="20" height="40" rx="4"/><path d="M23 41h6"/></svg><h3>スマホ</h3><span>SMARTPHONE</span><em>国内EC</em></li>
+    </ul>
+    <!-- 【確認事項】新品・中古品の別は未確認 -->
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section class="sec" id="process" data-rail aria-labelledby="prTitle">
+  <div class="wrap">
+    <div class="sh sh--glyph"><h2 id="prTitle"><i aria-hidden="true"></i>取り扱いのながれ</h2><span class="sh__en" lang="en">process</span></div>
+    <!-- 【確認事項】ながれは制作側の案（CSVに記載なし）。実際の手順なので番号を使用 -->
+    <ol class="steps reveal--fade" data-draw style="--n:4">
+      <li class="step"><span class="step__dot" aria-hidden="true"></span><span class="step__no">01</span><h3>選ぶ</h3><p>扱う品の仕様や状態を理解し、売り場に並べる品を選びます。</p></li>
+      <li class="step" style="--d:.6s"><span class="step__dot" aria-hidden="true"></span><span class="step__no">02</span><h3>確かめる</h3><p>状態や付属品を一点ずつ確認します。</p></li>
+      <li class="step" style="--d:1.2s"><span class="step__dot" aria-hidden="true"></span><span class="step__no">03</span><h3>伝える</h3><p>特長と事実を、誇張せずに分かりやすく伝えます。</p></li>
+      <li class="step" style="--d:1.8s"><span class="step__dot" aria-hidden="true"></span><span class="step__no">04</span><h3>届ける</h3><p>国内外のお客さまへ、丁寧にお届けします。</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Values ===== -->
+<section class="sec deep" id="values" data-rail aria-labelledby="vaTitle">
+  <div class="wrap">
+    <div class="sh sh--glyph"><h2 id="vaTitle"><i aria-hidden="true"></i>大切にしていること</h2><span class="sh__en" lang="en">values</span></div>
+    <!-- 【確認事項】文言は制作側の案 -->
+    <ul class="values reveal">
+      <li><h3><i>01</i>品をよく知る</h3><p>扱う商品の仕様や状態を理解してから、売り場に並べ、広告で紹介します。</p></li>
+      <li><h3><i>02</i>誇張しない</h3><p>魅力は分かりやすく、事実は正確に。信頼される伝え方を守ります。</p></li>
+      <li><h3><i>03</i>国内外へ、同じ誠実さで</h3><p>国内のお客さまにも、海外のお客さまにも、変わらない姿勢でお届けします。</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Message（草案） ===== -->
+<section class="sec paper" id="message" data-rail data-light aria-labelledby="msgTitle">
+  <!-- 【確認事項】代表メッセージは草案です。ご本人の確認・修正を経て公開してください -->
+  <div class="wrap">
+    <div class="msg reveal">
+      <h2 class="msg__title" id="msgTitle">焦点を、<br>品に合わせる。</h2>
+      <div class="msg__body">
+        <p class="first">よいモノを扱うことと、それを正しく伝えること。私たちは、この二つを切り離せない仕事だと考えています。</p>
+        <p>カメラも腕時計も、手に取れば分かる良さがあります。けれどネットの向こうのお客さまには、その良さを言葉と写真で届けるしかありません。</p>
+        <p>だから、まず品をよく知る。そのうえで、魅力は分かりやすく、事実は正確に伝える。紹介広告でも、ネットショップでも、同じ姿勢を守っています。</p>
+        <p>国内でも海外でも、届いた品を見て「思ったとおりだ」と感じていただけるように。</p>
+        <!-- 【確認事項】署名欄の氏名は会社概要に記載のため省略。役職名は仮 -->
+        <p class="msg__sign"><small>代表取締役</small><strong>立岩 侑起</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Company ===== -->
+<section class="sec" id="company" data-rail aria-labelledby="coTitle">
+  <div class="wrap company-grid">
+    <div class="reveal"><div class="sh sh--glyph"><h2 id="coTitle"><i aria-hidden="true"></i>会社概要</h2><span class="sh__en" lang="en">company</span></div></div>
+    <div class="reveal">
+<dl class="profile">
+  <div><dt>商号</dt><dd>株式会社メディアマテリアル</dd></div>
+  <!-- 【確認事項】役職名の表記（代表取締役と仮置き） -->
+  <div><dt>代表者</dt><dd>代表取締役　立岩侑起</dd></div>
+  <div><dt>所在地</dt><dd>〒604-8381　京都府京都市中京区西ノ京職司町4-10</dd></div>
+  <div><dt>事業内容</dt><dd><ul><li>広告マーケティング業（商品・サービスの認知拡大を目的とした紹介広告事業）</li><li>国内ECネットショップ運営（カメラ、腕時計、ゲーム、スマホなど）</li><li>海外ECネットショップ運営（腕時計など）</li></ul></dd></div>
+  <!-- 【確認事項】中古品を扱う場合は古物商許可番号を記載（確定後にコメントを外す）
+  <div><dt>古物商許可</dt><dd>　公安委員会　第　号</dd></div>
+  -->
+  <!-- 【確認事項】設立年月日・資本金・従業員数はCSVに無いため未掲載。確定後にコメントを外して記入
+  <div><dt>設立</dt><dd>　年　月</dd></div>
+  <div><dt>資本金</dt><dd>　万円</dd></div>
+  <div><dt>従業員数</dt><dd>　名</dd></div>
+  -->
+</dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer footer--center">
+  <div class="wrap footer-in">
+    <div>
+      <a class="logo" href="#top" aria-label="株式会社メディアマテリアル トップへ"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#C9CCD2" stroke-width="1.2"/><path d="M16 8l7 4v8l-7 4-7-4v-8z" fill="none" stroke="#5B86FF" stroke-width="1.4"/></svg><span class="logo__t"><b>MEDIA MATERIAL</b><small>株式会社メディアマテリアル</small></span></a>
+      <p class="footer-tag">確かな品を、確かな言葉で。</p>
+    </div>
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <ul>
+      <li><a href="#about">社名のこと</a></li>
+      <li><a href="#business">事業内容</a></li>
+      <li><a href="#items">取り扱い</a></li>
+      <li><a href="#process">ながれ</a></li>
+      <li><a href="#message">代表メッセージ</a></li>
+      <li><a href="#company">会社概要</a></li>
+      </ul>
+    </nav>
+    <p class="copy"><small>&copy; <span id="year">2026</span> 株式会社メディアマテリアル</small></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var railHooks = [], revealHooks = [];
+var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+/* header */
+var header = document.getElementById('header');
+
+/* menu */
+var btn = document.getElementById('menuBtn'), nav = document.getElementById('gnav');
+function setMenu(open){
+  btn.setAttribute('aria-expanded', String(open));
+  btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  nav.classList.toggle('is-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open){ var f = nav.querySelector('a'); if (f) f.focus(); }
+}
+btn.addEventListener('click', function(){ setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+nav.addEventListener('click', function(e){ if (e.target.closest('a') && nav.classList.contains('is-open')) setMenu(false); });
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && nav.classList.contains('is-open')){ setMenu(false); btn.focus(); } });
+matchMedia('(min-width:901px)').addEventListener('change', function(m){ if (m.matches) setMenu(false); });
+
+/* canvas runner (DPR<=2, debounce, pause offscreen/hidden, still frame on reduce) */
+function runCanvas(cv, factory, stillT){
+  if (!cv || !cv.getContext) return null;
+  var ctx = cv.getContext('2d'); if (!ctx) return null;
+  var api = factory(ctx), W = 0, H = 0, running = false, visible = true, raf = 0, t0 = performance.now();
+  function resize(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    api.build(W, H);
+  }
+  function loop(now){ if (!running) return; api.draw((now - t0)/1000); raf = requestAnimationFrame(loop); }
+  function start(){ if (running || reduce || !visible || document.hidden) return; running = true; raf = requestAnimationFrame(loop); }
+  function stop(){ running = false; cancelAnimationFrame(raf); }
+  function still(){ api.draw(stillT || 99); }
+  resize();
+  if (reduce) still(); else start();
+  var rt, lastW = W;
+  addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){
+    if (cv.clientWidth === lastW && Math.abs(cv.clientHeight - H) < 120 && running) return;  /* mobile URL bar */
+    lastW = cv.clientWidth; resize(); if (!running) still(); }, 150); });
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ visible = en[0].isIntersecting; visible ? start() : stop(); }).observe(cv.parentElement);
+  }
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  return { still: still, isRunning: function(){ return running; } };
+}
+var pointer = {x:.5, y:.5, has:false};
+addEventListener('pointermove', function(e){ pointer.x = e.clientX/innerWidth; pointer.y = e.clientY/innerHeight; pointer.has = true; }, {passive:true});
+function clamp(v,a,b){ return v < a ? a : (v > b ? b : v); }
+function ease(t){ return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2; }
+
+
+/* hero: 絞り羽根がゆっくり開閉する */
+var fEl = document.getElementById('fstop');
+var STOPS = ['16','11','8','5.6','4','2.8','2','1.4'];
+runCanvas(document.getElementById('heroCanvas'), function(ctx){
+  var W, H;
+  return {
+    build: function(w, h){ W = w; H = h; },
+    draw: function(t){
+      ctx.clearRect(0, 0, W, H);
+      var mobile = W < 760, cx = W*(mobile ? .5 : .44), cy = H*(mobile ? .44 : .48), R = Math.min(W, H)*(mobile ? .36 : .33);
+      var intro = ease(clamp((t - .3)/2.4, 0, 1));
+      var o = t >= 90 ? .62 : intro*(.6 + .3*Math.sin((t - 2.7)*.45)*clamp((t - 2.7)/1.5, 0, 1));
+      var rot = o*.9 + t*.02;
+      /* 外周リングと目盛り */
+      ctx.strokeStyle = 'rgba(201,204,210,' + (.35*intro) + ')'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(cx, cy, R*1.18, 0, 6.283); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx, cy, R*1.02, 0, 6.283); ctx.stroke();
+      for (var i = 0; i < 96; i++){ var a = i/96*6.283 + t*.01, l = i % 8 === 0 ? 10 : 4;
+        ctx.beginPath(); ctx.moveTo(cx + Math.cos(a)*R*1.18, cy + Math.sin(a)*R*1.18); ctx.lineTo(cx + Math.cos(a)*(R*1.18 - l), cy + Math.sin(a)*(R*1.18 - l)); ctx.stroke(); }
+      ctx.fillStyle = 'rgba(154,152,147,' + (.8*intro) + ')'; ctx.font = '11px "IBM Plex Mono", monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      for (var j = 0; j < STOPS.length; j++){ var b = -2.2 + j*.3; ctx.fillText(STOPS[j], cx + Math.cos(b)*R*1.28, cy + Math.sin(b)*R*1.28); }
+      /* 開口部の光 */
+      var r0 = R*(.12 + .62*o);
+      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r0*1.2);
+      g.addColorStop(0, 'rgba(160,185,255,.55)'); g.addColorStop(.5, 'rgba(91,134,255,.25)'); g.addColorStop(1, 'rgba(91,134,255,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283); ctx.fill();
+      /* 羽根：外周円から六角形の開口を抜く */
+      var V = [];
+      for (var k = 0; k < 6; k++){ var a2 = rot + k*1.0472; V.push([cx + Math.cos(a2)*r0, cy + Math.sin(a2)*r0]); }
+      ctx.save();
+      ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283);
+      ctx.moveTo(V[0][0], V[0][1]); for (k = 5; k >= 0; k--) ctx.lineTo(V[k][0], V[k][1]); ctx.closePath();
+      var bg = ctx.createLinearGradient(cx - R, cy - R, cx + R, cy + R);
+      bg.addColorStop(0, 'rgba(48,47,50,' + (.95*intro) + ')'); bg.addColorStop(1, 'rgba(22,21,22,' + (.95*intro) + ')');
+      ctx.fillStyle = bg; ctx.fill('evenodd');
+      ctx.clip('evenodd');
+      ctx.strokeStyle = 'rgba(201,204,210,' + (.4*intro) + ')'; ctx.lineWidth = 1;
+      for (k = 0; k < 6; k++){
+        var A = V[k], B = V[(k + 1) % 6], dx = B[0] - A[0], dy = B[1] - A[1], L = Math.hypot(dx, dy) || 1;
+        ctx.beginPath(); ctx.moveTo(A[0], A[1]); ctx.lineTo(A[0] + dx/L*R*2.2, A[1] + dy/L*R*2.2); ctx.stroke();
+      }
+      ctx.restore();
+      ctx.strokeStyle = 'rgba(91,134,255,' + (.7*intro) + ')'; ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.moveTo(V[0][0], V[0][1]); for (k = 1; k < 6; k++) ctx.lineTo(V[k][0], V[k][1]); ctx.closePath(); ctx.stroke();
+      if (fEl){ var idx = Math.round(clamp(o, 0, 1)*(STOPS.length - 1)); fEl.textContent = 'f/' + STOPS[idx]; }
+    }
+  };
+}, 99);
+
+/* rail: 小さな絞りが開き、f値が進む */
+var hole = document.getElementById('railHole'), fRead = document.getElementById('railRead'), iris = document.getElementById('railIris');
+railHooks.push(function(p){
+  iris.style.top = (p*100) + '%'; fRead.style.top = (p*100) + '%';
+  var r = 2 + p*7, d = '', a0 = reduce ? 0 : p*1.2;
+  for (var k = 0; k < 6; k++){ var a = a0 + k*1.0472; d += (k ? 'L' : 'M') + (Math.cos(a)*r).toFixed(2) + ' ' + (Math.sin(a)*r).toFixed(2); }
+  hole.setAttribute('d', d + 'Z');
+  fRead.textContent = 'f/' + STOPS[Math.round(p*(STOPS.length - 1))];
+});
+
+
+/* reveal (one-shot) */
+var targets = document.querySelectorAll('.reveal, [data-draw]');
+function reveal(el){ el.classList.add('is-in'); revealHooks.forEach(function(h){ h(el); }); }
+if ('IntersectionObserver' in window && !reduce){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (!en.isIntersecting) return; reveal(en.target); io.unobserve(en.target); });
+  }, {threshold:.18, rootMargin:'0px 0px -6% 0px'});
+  targets.forEach(function(t){ io.observe(t); });
+} else { targets.forEach(reveal); }
+
+/* rail */
+var rail = document.getElementById('rail'), fill = document.getElementById('railFill');
+var secs = Array.prototype.slice.call(document.querySelectorAll('[data-rail]')), ticks = [];
+var lights = Array.prototype.slice.call(document.querySelectorAll('[data-light]'));
+function layoutTicks(){
+  ticks.forEach(function(t){ t.el.remove(); }); ticks = [];
+  var max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  secs.forEach(function(s){
+    var p = clamp(s.offsetTop / max, 0, 1), el = document.createElement('i');
+    el.className = 'rail__tick'; el.style.top = (p*100) + '%'; rail.appendChild(el); ticks.push({p:p, el:el});
+  });
+}
+var band = document.querySelector('.band img');
+function onScroll(){
+  header.classList.toggle('is-scrolled', scrollY > 40);
+  var max = document.documentElement.scrollHeight - innerHeight;
+  var p = max > 0 ? clamp(scrollY / max, 0, 1) : 0;
+  fill.style.transform = 'scaleY(' + p + ')';
+  ticks.forEach(function(t){ t.el.classList.toggle('is-passed', p >= t.p - .002); });
+  var mid = innerHeight/2, onLight = lights.some(function(s){ var r = s.getBoundingClientRect(); return r.top < mid && r.bottom > mid; });
+  rail.classList.toggle('on-light', onLight);
+  railHooks.forEach(function(h){ h(p, ticks); });
+  if (band && !reduce){
+    var r = band.parentElement.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < innerHeight){ var k = (r.top + r.height/2 - innerHeight/2)/innerHeight; band.style.transform = 'translateY(' + (k*-40).toFixed(1) + 'px)'; }
+  }
+}
+var ticking = false;
+addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ onScroll(); ticking = false; }); } }, {passive:true});
+addEventListener('load', function(){ layoutTicks(); onScroll(); });
+addEventListener('resize', function(){ layoutTicks(); onScroll(); });
+layoutTicks(); onScroll();
+
+requestAnimationFrame(function(){ requestAnimationFrame(function(){ document.body.classList.add('is-loaded'); }); });
+})();
+</script>
+</body>
+</html>
